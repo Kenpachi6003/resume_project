@@ -211,11 +211,28 @@ def resume_creator():
                         responsility3=job["job"]["job_description"][2],
                         job_id=latest_job_added.id,
                     )
- 
-            user1 = Resume_template(first_name + " " +last_name, address, city, state,
-            number, email, objective, [qualification1, qualification2, qualification3, qualification4,qualification5],
-            jobs, education, first_name + last_name + str(latest_resume_added.id) + ".docx", Document())
-            
+
+            user1 = Resume_template(
+                first_name + " " + last_name,
+                address,
+                city,
+                state,
+                number,
+                email,
+                objective,
+                [
+                    qualification1,
+                    qualification2,
+                    qualification3,
+                    qualification4,
+                    qualification5,
+                ],
+                jobs,
+                education,
+                first_name + last_name + str(latest_resume_added.id) + ".docx",
+                Document(),
+            )
+
             user1.add_info()
             return redirect(url_for("home"))
     else:

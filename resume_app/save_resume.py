@@ -5,8 +5,6 @@ from docx.enum.style import WD_STYLE_TYPE
 import importlib.util
 
 
-
-
 class Resume_template:
 
     def __init__(
@@ -22,7 +20,7 @@ class Resume_template:
         profesional_experience,
         education,
         filename,
-        document
+        document,
     ):
 
         self.name = name
@@ -45,7 +43,6 @@ class Resume_template:
         self.add_working_exp()
         self.add_education()
         self.document.save(self.filename)
-
 
     def add_title(self):
         title = self.document.add_paragraph()
@@ -73,17 +70,18 @@ class Resume_template:
         run.font.size = Pt(14)
         for job in self.profesional_experience:
             if job["job"]["company_name"] != "":
-              
+
                 place_worked = job["job"]["company_name"]
                 city = job["job"]["city"]
                 state = job["job"]["state"]
                 starting_date = job["job"]["starting_date"]
                 end_date = job["job"]["end_date"]
                 job_title = job["job"]["job_title"]
-                job_desc = [job["job"]["job_description"][0],
-                            job["job"]["job_description"][1],
-                            job["job"]["job_description"][2]]
-                
+                job_desc = [
+                    job["job"]["job_description"][0],
+                    job["job"]["job_description"][1],
+                    job["job"]["job_description"][2],
+                ]
 
                 title = self.document.add_paragraph()
 
@@ -92,7 +90,9 @@ class Resume_template:
 
                 job_location = self.document.add_paragraph()
 
-                run_1 = job_location.add_run(f"{place_worked.capitalize()} - {city.capitalize()} {state.capitalize()}")
+                run_1 = job_location.add_run(
+                    f"{place_worked.capitalize()} - {city.capitalize()} {state.capitalize()}"
+                )
 
                 work_dates = self.document.add_paragraph()
 
@@ -105,18 +105,15 @@ class Resume_template:
                 job_des = self.document.add_paragraph()
                 job_des2 = job_des.add_run(f"{job_desc[2].capitalize()}")
 
-                
-
     def add_education(self):
         title = self.document.add_paragraph()
         run_1 = title.add_run("Education:")
         run_1.bold = True
         run_1.underline = True
         run_1.font.size = Pt(14)
-        
+
         self.document.add_paragraph(self.education.capitalize())
-        
-        
+
     def add_qualifications(self):
         title = self.document.add_paragraph()
         run_1 = title.add_run("Qualifications:")
@@ -126,5 +123,3 @@ class Resume_template:
 
         for skill in self.qualifications:
             self.document.add_paragraph(skill.capitalize(), style="List Bullet")
-
-
