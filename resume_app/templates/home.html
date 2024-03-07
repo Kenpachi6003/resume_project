@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styling.css')}}">
+<p>Welcome to the home page</p>
+    
+    {% for item in users%}
+    <p>id: {{item.id}}</p>
+    <p>username: {{item.username}}</p>
+    <p>first_name: {{item.first_name}}</p>
+    <p>last_name: {{item.last_name}}</p>
+    <p>email: {{item.email}}</p>
+    <p>password: {{item.password}}</p>
+    <p>resume: {{item.resume}}</p>
+    {% endfor %}
+    
+    {% for item in resumes%}
+    <p>id: {{item.id}}</p>
+    <p>first_name: {{item.first_name}}</p>
+    <p>last_name: {{item.last_name}}</p>
+    <p>address: {{item.address}}</p>
+    <p>city: {{item.city}}</p>
+    <p>state: {{item.state}}</p>
+    <p>number: {{item.number}}</p>
+    <p>email: {{item.email}}</p>
+    <p>objective: {{item.objective}}</p>
+    <p>qualifications: {{item.qualifications}}</p>
+    <p>job: {{item.job}}</p>
+    <p>education: {{item.education}}</p>
+    <p>user_id {{item.user_id}}</p>
+
+    {% endfor %}
+    {% for item in values %}
+        <p>ID: {{item.id}}</p>
+        <p>qualification 1:{{item.qualification1}}</p>
+        <p>qualification 2:{{item.qualification2}}</p>
+        <p>qualification 3:{{item.qualification3}}</p>
+        <p>qualification 4:{{item.qualification4}}</p>
+        <p>qualification 5:{{item.qualification5}}</p>
+        <p>comapany id: {{item.job_id}}</p>
+
+    {% endfor%}
+    {% for item in jobs%}
+    <p>{{item.id}}</p>
+    <p>{{item.company_name}}</p>
+    <p>{{item.city}}</p>
+    <p>{{item.state}}</p>
+    <p>{{item.starting_date}}</p>
+    <p>{{item.end_date}}</p>
+    <p>{{item.job_title}}</p>
+    <p>{{item.resume_id}}</p>
+
+    {% endfor %}
+{% endblock %}

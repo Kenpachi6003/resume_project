@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resume_creator.css')}}">
+
+<h1>Creating a resume</h1>
+<body>
+    <form method="POST">
+        <div id="name">
+
+                <p class ="info" >Name:</p>
+                <label class="label" >First name:</label>
+                <input class="input_box" type="text" name="first_name">
+                <label class="label" >Last name:</label>
+                <input class="input_box" type="text" name="last_name">
+                
+
+        </div>
+
+        <div id="address">
+
+                <p class ="info" >Address:</p>
+                <label class="label">Street Name:</label>
+                <input class="input-box" type="text" name="street_name">
+                <label class="label" >City:</label>
+                <input class="input_box" type="text" name="city">
+                <label class="label" >State:</label>
+                <input class="input_box" type="text" name="state">
+                <label class="label" >Zipcode:</label>
+                <input class="input_box" type="text" name="zipcode">
+                
+        </div>
+    
+        <div id="contact-info">
+
+                <p class ="info" >Contact Info:</p>
+                <label class="label">Phone number:</label>
+                <input class="input-box" type="text" name="number">
+                <label class="label" >Email:</label>
+                <input class="input-box" type="text" name="email">
+
+        </div>
+        <div>
+
+                <p class ="info" >Objective:</p>
+                <label class="label">What is your objective?</label>
+                <input class="input-box" type="text" name="objective">
+
+        </div>
+
+        <div id="qualifications">
+            <form method="POST">
+                <p class="info" >Qualifications:</p>
+                <ol>
+                <li><input class="qualification_box" type="text" name="qualification1"></li>
+                <li><input class="qualification_box" type="text" name="qualification2"></li>
+                <li><input class="qualification_box" type="text" name="qualification3"></li>
+                <li><input class="qualification_box" type="text" name="qualification4"></li>
+                <li><input class="qualification_box" type="text" name="qualification5"></li>
+                </ol>
+
+
+        </div>
+
+        <div>
+
+                <p class ="info" >Proffesional Experience:</p>
+                <label class="label">Company name:</label>
+                <input class="input-box" type="text" name="company_name1">
+                <label class="label" >City:</label>
+                <input class="input_box" type="text" name="city1">
+                <label class="label" >State:</label>
+                <input class="input_box" type="text" name="state1">
+                <label class="label" >Starting date:</label>
+                <input class="input_box" type="text" name="starting_date1"><br/>
+                <label class="label" >End date:</label>
+                <input class="input_box" type="text" name="end_date1">
+                <label class="label">Job title:</label>
+                <input class="input-box" type="text" name="job_title1"><br/>
+                <label class="label" >Job responsibilities:</label><br/>
+                <input class="input_box" type="text" name="job_description1-1"><br/>
+                <input class="input_box" type="text" name="job_description1-2"><br/>
+                <input class="input_box" type="text" name="job_description1-3">
+
+        </div>
+        <div>
+                <p class ="info" >Proffesional Experience:</p>
+                <label class="label">Company name:</label>
+                <input class="input-box" type="text" name="company_name2">
+                <label class="label" >City:</label>
+                <input class="input_box" type="text" name="city2">
+                <label class="label" >State:</label>
+                <input class="input_box" type="text" name="state2">
+                <label class="label" >Starting date:</label>
+                <input class="input_box" type="text" name="starting_date2"><br/>
+                <label class="label" >End date:</label>
+                <input class="input_box" type="text" name="end_date2">
+                <label class="label">Job title:</label>
+                <input class="input-box" type="text" name="job_title2"><br/>
+                <label class="label" >Job responsibilities:</label><br/>
+                <input class="input_box" type="text" name="job_description2-1"><br/>
+                <input class="input_box" type="text" name="job_description2-2"><br/>
+                <input class="input_box" type="text" name="job_description2-3">
+
+        </div>
+        <div>
+
+                <p class ="info" >Proffesional Experience:</p>
+                <label class="label">Company name:</label>
+                <input class="input-box" type="text" name="company_name3">
+                <label class="label" >City:</label>
+                <input class="input_box" type="text" name="city3">
+                <label class="label" >State:</label>
+                <input class="input_box" type="text" name="state3">
+                <label class="label" >Starting date:</label>
+                <input class="input_box" type="text" name="starting_date3"><br/>
+                <label class="label" >End date:</label>
+                <input class="input_box" type="text" name="end_date3">
+                <label class="label">Job title:</label>
+                <input class="input-box" type="text" name="job_title3"><br/>
+                <label class="label" >Job responsibilities:</label><br/>
+                <input class="input_box" type="text" name="job_description3-1"><br/>
+                <input class="input_box" type="text" name="job_description3-2"><br/>
+                <input class="input_box" type="text" name="job_description3-3">
+
+        </div>
+        <div>
+
+                <p class ="info" >Education:</p>
+                <label class="label">School name:</label>
+                <input class="input-box" type="text" name="school_name">
+                <label class="label" >City:</label>
+                <input class="input_box" type="text" name="city">
+                <label class="label" >State:</label>
+                <input class="input_box" type="text" name="state">
+                <p><input type="submit" value="submit" /></p>
+
+
+        </div>
+    </form>
+</body>
+
+{% endblock %}
+
+</html>

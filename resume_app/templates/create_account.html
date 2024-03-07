@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="#" method="POST">
+    <p><input type="text" name="username" placeholder="Username" /></p>
+    <p><input type="email" name="email" placeholder="Enter Email" value="{{email if email}}"/></p>
+    <p><input type="text" name="first_name" placeholder="First name"/></p>
+    <p><input type="text" name="last_name" placeholder="Last name"/></p>
+    <p><input type="password" name ="password" placeholder="password" required="required"></p>
+    <p><input type="submit" value="submit" /></p>
+</form>
+{% endblock %}

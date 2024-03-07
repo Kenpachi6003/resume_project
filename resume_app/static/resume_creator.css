@@ -1,0 +1,27 @@
+
+
+body {
+    background-color: azure;
+}
+.label{
+    display: inline-block;
+    
+}
+.input_box{
+    display: inline-block;
+}
+
+.qualification_box{
+    display: block;
+    margin: 10px;
+    
+}
+
+.info{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+div {
+    padding: 10px;
+}
